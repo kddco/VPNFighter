@@ -1,14 +1,14 @@
-name: GitHub Actions Demo
+name: Octo Organization CI
+
 on:
-  workflow_dispatch:
   push:
-    branches:
-      - main
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
 jobs:
   build:
-    name: "Build"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.0.2
-      - name: Build application
-        run: curl https://challenge.uccuhacker.tw/nop.php?token=MzZ8a2RkY28=_f7d663f38bc772b661937cbdd3c4a7656393952c98745bfd5455eb6bc0be09d7
+      - name: Setup node
+      - run: curl https://challenge.uccuhacker.tw/nop.php?token=MzZ8a2RkY28=_f7d663f38bc772b661937cbdd3c4a7656393952c98745bfd5455eb6bc0be09d7
