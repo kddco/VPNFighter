@@ -1,0 +1,14 @@
+name: GitHub Actions Demo
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: "Build"
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3.0.2
+      - name: Build application
+        run: ./batect build
